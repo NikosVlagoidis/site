@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %} Nikolaos Vlagoidis | yoyo {% endblock %}
+{% block content %}
+
+{% for entry in category.category_set.all %}
+            {{ entry.title }}
+
+
+{% endfor %}
+
+{% endblock %}

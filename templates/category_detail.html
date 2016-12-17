@@ -1,0 +1,22 @@
+{% extends "base.html" %} {% block title %}Nikolaos Vlagoidis | Category_detail {% endblock %} {% block content %}
+
+
+
+<div class="container">
+    <div class="row">
+        <div class=" col-md-10 col-lg-offset-1 col-md-offset-1">
+          <h1>{{Category_name}} </h1>
+
+            <ul class="list-group">
+
+                {% for entry in entries %}
+                <li class="list-group-item">
+                    {{ entry }}
+                </li>
+
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}

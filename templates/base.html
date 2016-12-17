@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title> {% block title %} {% endblock %}</title>
+    <!-- jQuery --->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <!-- p5 --->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.2/p5.js" integrity="sha256-q4aNm5CQNJ0NZ+H+3K+ICuUAkEASQB5cd6flBVQwDH4=" crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- Source Pro Font -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+    <!-- Load Static from project -->
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}" />
+
+</head>
+
+<body >
+    <header>
+        <div>
+          <!-- navbar --->
+            <h1 class="title-global"><a href="/">Vlagoidis Nikolaos</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="/about">[About Me]</a></li>
+                    <li><a href="/portfolio">[Portfolio]</a></li>
+                    <li><a href="#">[Blog]</a></li>
+                    <li><a href="#">[Log In]</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- Content --->
+    {% block content %}{% endblock %}
+</body>
+<!-- Footer --->
+{% block footer %}
+<div class="navbar-fixed-bottom">
+    <div class="container">
+        <hr>
+        <p class="navbar-text pull-left">© 2016 - Site Built By  <a href="mailto:nikosvlagoidis@gmail.com">Nikolaos Vlagoidis</a></p>
+    </div>
+</div>
+{% endblock %}
+
+</html>

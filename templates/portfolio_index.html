@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}Nikolaos Vlagoidis | Portfolio {% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+      <div class=" col-md-10 col-lg-offset-1 col-md-offset-1">
+        <p> This is my portfolio all the projects i have done through 2
+        years short in categories</p>
+        <ul class = "list-group">
+          {% for category in categories %}
+          <li class="list-group-item">
+            <a href="{%url 'category_list' category.slug %}">
+              <font size="5"> {{ category.title }} </font>
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+</div>
+{% endblock %}
