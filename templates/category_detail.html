@@ -20,7 +20,13 @@
                     {{ entry.technologies}}
                   </p>
                 </div>
+
+                <!--Link to detail view -->
+                <a href="{%url 'entry_detail' entry.slug %}">
+                  <font size="5"> {{ entry.title }} </font>
+                </a>
                 </p>
+
 
             {% endfor %}
         </div>

@@ -16,6 +16,6 @@ def category_list(request, category_slug):
     return render(request,'category_detail.html', {'entries':entries,'Category_name':name_of_category})
 
 
-def entry_detail(request,category_slug,entry_slug):
+def entry_detail(request,entry_slug):
     entry = Entry.objects.get(slug=entry_slug)
     return render(request, 'entry_detail.html', {'entry': entry})

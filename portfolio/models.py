@@ -25,7 +25,7 @@ class Entry(models.Model):
 
     @permalink
     def get_absolute_url(self):
-        return('entry_detail',None, {'slug':self.slug})
+        return('entry_detail',None, {'entry_slug':self.slug})
 
     def __str__(self):
         return self.title
