@@ -12,7 +12,7 @@ class Category(models.Model):
 
     @permalink
     def get_absolute_url(self):
-        return ('view_category', None, { 'slug': self.slug })
+        return ('category_list', None, { 'slug': self.slug })
 
 class Entry(models.Model):
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
@@ -25,7 +25,7 @@ class Entry(models.Model):
 
     @permalink
     def get_absolute_url(self):
-        return('view_entry',None, {'slug':self.slug})
+        return('entry_detail',None, {'slug':self.slug})
 
     def __str__(self):
         return self.title
