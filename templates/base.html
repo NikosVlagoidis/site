@@ -28,14 +28,9 @@
     <link rel="icon" href="{%  static 'favicon.ico' %}" type="image/x-icon">
 
 </head>
-
 <body>
-    <header>
 
-
-
-
-        <div class="container-fluid">
+ <header>        <div class="container">
             <div class="row">
 
                     <!-- navbar --->
@@ -66,7 +61,7 @@
 
             </div>
         </div>
-    </div>
+    
 
 
 
@@ -74,17 +69,18 @@
 </body>
 <!-- Footer --->
 {% block footer %}
-<div class="navbar-fixed-bottom">
-    <div class="container">
+<footer class="footer">
+  <div class="container">
         <hr>
         <p class="navbar-text pull-left">
           © 2016 - Contact
         <a href="mailto:nikosvlagoidis@gmail.com" style="text-decoration:none"> <i class="fa fa-envelope" aria-hidden="true"></i> </a>
 
         <a href="https://github.com/NikosVlagoidis" target="_blank" style="text-decoration:none" > <i class="fa fa-github fa-lg" aria-hidden="true"></i> </a>
-</p>
-    </div>
+	</p>
 </div>
+    </footer>
+
 {% endblock %}
 
 </html>
