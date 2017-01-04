@@ -1,31 +1,36 @@
-{% extends "base.html" %} {% block title %}Nikolaos Vlagoidis | {{Category_name}} {% endblock %} {% block content %}
+{% extends "base.html" %}
+ {% block title %}Nikolaos Vlagoidis | {{Category_name}} {% endblock %}
+
+
+
+ {% block content %}
 
 
 
 
-            <h1><u>{{Category_name}}</u> </h1>
+            <h1 style="text-align:center"> <font size="6"> <u>{{Category_name}}</u> </font> </h1>
             {% for entry in entries %}
                 <p>
-                <!-- every entry -->
-                <button class="btn btn-default" data-toggle="collapse" data-target="#{{ entry.slug }}"> {{ entry }}</button>
-                <div id="{{ entry.slug }}" class="collapse">
-                  <u>Short Description</u>
-                  <p>
-                    {{ entry.short_description }}
-                  </p>
-                  <u>Technologies Used</u>
-                  <p>
-                    {{ entry.technologies}}
-                  </p>
-                </div>
-
                 <!--Link to detail view -->
                 <a href="{%url 'entry_detail' entry.slug %}">
-                  <font size="5"> {{ entry.title }} </font>
+                  <font size="2"> {{ entry.title }} </font>
                 </a>
                 </p>
 
-
             {% endfor %}
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <button type="button" class="btn btn-link" onclick="goBack()" style="color:white"> << Go Back </button>
+
+
+            <script>
+            function goBack() {
+            window.history.back();
+            }
+            </script>
 
 {% endblock %}

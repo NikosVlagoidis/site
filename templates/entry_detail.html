@@ -2,14 +2,29 @@
 
 {% block title %} Nikolaos Vlagoidis |  {% endblock %}
 {% block content %}
-
-          <u>Short Description</u>
-          <p>
+        <h1 style="text-align:center"> <font size="6"> <u>{{entry}}</u> </font> </h1>
+        <h1><font size="5"><i class="fa fa-file-text" aria-hidden="true"></i> <u> Short Description</font> </u></h1>
+          <h2>
             {{ entry.short_description }}
-          </p>
-          <u>Technologies Used</u>
+          </h2>
+          <h1><font size="5"><i class="fa fa-laptop" aria-hidden="true"></i> <u> Technologies Used </font></u></h1>
           <p>
             {{ entry.technologies}}
           </p>
+
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <button type="button" class="btn btn-link" onclick="goBack()" style="color:white"> << Go Back </button>
+
+
+<script>
+function goBack() {
+    window.history.back();
+}
+</script>
 
 {% endblock %}

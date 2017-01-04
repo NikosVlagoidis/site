@@ -6,7 +6,8 @@ body {
   min-width: 48em;
 }
 img { border:0; }
-a { outline:0; }
+a {
+  outline:0; }
 main, figure, figcaption { display:block; }
 pre, code { font-family: "Source Code Pro", monospace; }
 header, main {
