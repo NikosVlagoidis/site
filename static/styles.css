@@ -1,9 +1,12 @@
+
 body {
+  padding-bottom: 265px;
   background: #0f0f23; /*337 x 5*/
   color: #cccccc;
   font-family: "Source Code Pro", monospace;
   font-size: 14pt;
-  min-width: 48em;
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
 }
 img { border:0; }
 a {
@@ -92,14 +95,7 @@ a.supporter:hover {
   text-shadow: 0 0 5px #ffff66;
 }
 
-#sidebar {
-  width: 160px;
-  float: right;
-  margin: 0 15px 2em 2em;
-}
-#sponsor {
-  margin-bottom: 2.5em;
-}
+
 
 header {
   padding:40px;
@@ -162,52 +158,11 @@ input[type="text"] {
   margin: 0;
 }
 
-input[type="submit"] {
-  background: transparent;
-  border: 0;
-  font-family: inherit;
-  font-size: inherit;
-  margin: 0;
-  padding: 0;
-  color: #009900;
-  cursor: pointer;
-}
-input[type="submit"]:hover {
-  color: #99ff99;
-}
-*::-moz-focus-inner {
-  padding: 0;
-  border: 0
-}
 
 
-
-.share {
-  color: #009900;
-  cursor: default;
-  transition: color .2s 1s;
-  /*position: relative;*/
-}
-.share:hover {
-  color: #aaffaa;
-  transition: color .2s 0s;
-}
-.share .share-content {
-  /*position: absolute; background: #0f0f23;*/
-  display: inline-block;
-  vertical-align: text-bottom;
-  white-space: nowrap;
-  overflow: hidden;
-  max-width: 0;
-  transition: max-width .2s 1s;
-}
-.share .share-content:before {
-  content: "\00a0";
-}
-.share .share-content:after {
-  /*content: "]";*/
-}
-.share:hover .share-content {
-  max-width: 45em;
-  transition: max-width .2s 0s;
-}
+footer {
+            background-color: #333;
+            width: 100%;
+            bottom: 0;
+            position: fixed;
+        }

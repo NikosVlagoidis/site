@@ -7,7 +7,7 @@
     <!-- jQuery --->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
-      <!-- Latest compiled and minified CSS -->
+    <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
     <!-- Optional theme -->
@@ -28,59 +28,60 @@
     <link rel="icon" href="{%  static 'favicon.ico' %}" type="image/x-icon">
 
 </head>
+
 <body>
 
- <header>        <div class="container">
-            <div class="row">
 
-                    <!-- navbar --->
-                    <h1 class="title-global"><a href="/">Vlagoidis Nikolaos <i class="fa fa-home" ></i></a></h1>
-                    <nav>
+        <header>
+            <!-- navbar --->
+            <h1 class="title-global"><a href="/">Vlagoidis Nikolaos <i class="fa fa-home" ></i></a></h1>
+            <nav>
+                <ul>
+                    <li><a href="/about">[About Me] <i class="fa fa-user "></i> </a>
+                    </li>
+                    <li><a href="/portfolio">[Portfolio] <i class="fa fa-code" aria-hidden="true"></i></a></li>
+                    <li><a href="#">[Blog] <i class="fa fa-rss" aria-hidden="true"></i></a></li>
+                    <li><a href="#">[Log In] <i class="fa fa-sign-in" aria-hidden="true"></i></a></li>
+                </ul>
+            </nav>
+        </header>
 
-                        <ul>
-                            <li><a href="/about">[About Me] <i class="fa fa-user "></i> </a>
-                            </li>
-                            <li><a href="/portfolio">[Portfolio] <i class="fa fa-code" aria-hidden="true"></i></a></li>
-                            <li><a href="#">[Blog] <i class="fa fa-rss" aria-hidden="true"></i></a></li>
-                            <li><a href="#">[Log In] <i class="fa fa-sign-in" aria-hidden="true"></i></a></li>
-                        </ul>
 
 
-                    </nav>
 
-            </div>
+        <!-- Content --->
+        <div class="container">
+        <div class=" col-xs-8  col-xs-offset-2">
+
+            {% block content %}{% endblock %}
+
+        </div>
         </div>
 
-    </header>
-    <!-- Content --->
-    <div class="container-fluid">
-        <div class="row">
-            <div class=" col-xs-8  col-xs-offset-2">
 
-                {% block content %}{% endblock %}
 
-            </div>
+
+    <!-- Footer --->
+    {% block footer %}
+    <div class="navbar">
+
+    <div class="navbar  navbar-fixed-bottom" style="background: #0f0f23">
+        <div class="container">
+            <hr>
+            <p style="background: #0f0f23">
+                © 2016 - Contact
+                <a href="mailto:nikosvlagoidis@gmail.com" style="text-decoration:none"> <i class="fa fa-envelope" aria-hidden="true"></i> </a>
+
+                <a href="https://github.com/NikosVlagoidis" target="_blank" style="text-decoration:none"> <i class="fa fa-github fa-lg" aria-hidden="true"></i> </a>
+            </p>
         </div>
-    
+    </div>
+  </div>
 
-
+    {% endblock %}
 
 
 </body>
-<!-- Footer --->
-{% block footer %}
-<footer class="footer">
-  <div class="container">
-        <hr>
-        <p class="navbar-text pull-left">
-          © 2016 - Contact
-        <a href="mailto:nikosvlagoidis@gmail.com" style="text-decoration:none"> <i class="fa fa-envelope" aria-hidden="true"></i> </a>
 
-        <a href="https://github.com/NikosVlagoidis" target="_blank" style="text-decoration:none" > <i class="fa fa-github fa-lg" aria-hidden="true"></i> </a>
-	</p>
-</div>
-    </footer>
-
-{% endblock %}
 
 </html>
